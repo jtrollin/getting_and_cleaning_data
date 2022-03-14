@@ -1,33 +1,33 @@
 # Data Lineage
 
-xtrain - loaded from train/X_train.txt
-xtest - loaded from test/X_test.txt
+**xtrain** - loaded from train/X_train.txt
+**xtest** - loaded from test/X_test.txt
 
-ytrain - loaded from train/Y_train.txt
-ytest - loaded from test/Y_test.txt
+**ytrain** - loaded from train/Y_train.txt
+**ytest** - loaded from test/Y_test.txt
 
-subject_train - loaded from train/subject_train.txt
-subject_test - loaded from train/subject_test.txt
+**subject_train** - loaded from train/subject_train.txt
+**subject_test**** - loaded from train/subject_test.txt
 
-subject_train is then added as a column called **subject** to ytrain
-subject_test is then added as a column called **subject** to ytest
+**subject_train** is then added as a column called **subject** to ytrain
+**subject_test** is then added as a column called **subject** to ytest
 
-xall is a combination of xtrain and xtest
-yall is a combination of ytrain and ytest
+**xall** is a combination of xtrain and xtest
+**yall** is a combination of ytrain and ytest
 
-xall column names are then changed to match names from data/features.txt
+**xall** column names are then changed to match names from data/features.txt
 
-all is a combination of xall and yall data
+**all** is a combination of xall and yall data
 
-allclean is a subset of all that only includes columns that include mean, std, or are the activity or subject column
+**allclean** is a subset of all that only includes columns that include mean, std, or are the activity or subject column
 
 allclean is then merged with the data from data/activity_labels.txt so that the activity number is now represented by the name of the activity
 
 allclean columns are renamed to be all lower case with the () and with _ instead of -
 
-averages is the allclead data grouped by **activity** and **subject**
+**averages** is the allclead data grouped by **activity** and **subject**
 
-meandata is the mean of all the values grouped by activity and subject
+**meandata** is the mean of all the values grouped by activity and subject
 
 The fields in allclean are listed below, they map directly back to the values in data/features.txt except for activityid, activity and subject.
 activityid and activity come from data/activity_labels.txt and subject comes from train/subject_train.txt and test/subject_test.txt           
@@ -98,6 +98,6 @@ fbodybodygyromag_mean
 fbodybodygyromag_std     
 fbodybodygyrojerkmag_mean
 fbodybodygyrojerkmag_std 
-activityid 
-subject                  
-activity     
+activityid - Id of the activity that was peformed
+subject - The Id of the subject
+activity - The name of the activity being peformed
