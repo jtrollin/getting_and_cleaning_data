@@ -37,7 +37,7 @@ names(yall) <- c("activityid", "subject")
 features <- read.table("data/features.txt")
 
 # changing the dataframe column names to match the features
-names(xall) <- features$V1
+names(xall) <- features$V2
 
 #combining all the data in to a single df
 all <- cbind(xall, yall)
@@ -69,3 +69,4 @@ averages <- group_by(allclean, activity, subject)
 
 meandata <- summarize_each(averages, mean)
 
+meandata
